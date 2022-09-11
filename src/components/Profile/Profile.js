@@ -1,62 +1,43 @@
-// function Profile ({username, tag, location, avatar, stats}) {
-//     return 
-//     <div className="profile">
-//   <div className="description">
-//     <img
-//       src={avatar}
-//       alt={username}
-//       className="avatar"
-//     />
-//     <p className="name">{username}</p>
-//     <p className="tag">@{tag}</p>
-//     <p className="location">{location}</p>
-//   </div>
+import PropTypes from 'prop-types';
+import { UserPhoto, UserName, UserInfo } from './Profile.styled';
 
-//   <ul className="stats">
-//     <li>
-//       <span className="label">Followers</span>
-//       <span className="quantity">{stats.followers}</span>
-//     </li>
-//     <li>
-//       <span className="label">Views</span>
-//       <span className="quantity">{stats.views}</span>
-//     </li>
-//     <li>
-//       <span className="label">Likes</span>
-//       <span className="quantity">{stats.likes}</span>
-//     </li>
-//   </ul>
-// </div>
-// }
-// import user from "./user.json";
+import { Box } from 'components/Box';
+
 export const Profile = ({username, tag, location, avatar, stats}) =>{
     return (
-        <div className="profile">
-         <div className="description">
-            <img
+        <Box bg="background" m="0 auto">
+         <Box>
+            <UserPhoto
               src={avatar}
               alt={username}
-              className="avatar"
             />
-            <p className="name">{username}</p>
-            <p className="tag">@{tag}</p>
-            <p className="location">{location}</p>
-          </div>
+            <UserName>{username}</UserName>
+            <UserInfo>@{tag}</UserInfo>
+            <UserInfo>{location}</UserInfo>
+          </Box>
         
-          <ul className="stats">
+          <Box as="ul">
             <li>
-              <span className="label">Followers</span>
-              <span className="quantity">{stats.followers}</span>
+              <span>Followers</span>
+              <span>{stats.followers}</span>
             </li>
             <li>
-              <span className="label">Views</span>
-              <span className="quantity">{stats.views}</span>
+              <span>Views</span>
+              <span>{stats.views}</span>
             </li>
             <li>
-              <span className="label">Likes</span>
-              <span className="quantity">{stats.likes}</span>
+              <span>Likes</span>
+              <span>{stats.likes}</span>
             </li>
-          </ul>
-        </div>
+          </Box>
+        </Box>
     )
+}
+
+Profile.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location:PropTypes.string.isRequired,
+    avatar:PropTypes.string.isRequired,
+    stats:PropTypes.objectOf(PropTypes.number).isRequired,   
 }
