@@ -5,8 +5,9 @@ import { Box } from 'components/Box';
 
 export const Profile = ({username, tag, location, avatar, stats}) =>{
     return (
-        <Box bg="background" m="0 auto">
-         <Box>
+        <Box bg="background" m="0 auto" boxShadow="0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16)">
+         <Box mt="2" mb="2">
             <UserPhoto
               src={avatar}
               alt={username}
@@ -16,7 +17,7 @@ export const Profile = ({username, tag, location, avatar, stats}) =>{
             <UserInfo>{location}</UserInfo>
           </Box>
         
-          <Box as="ul">
+          <Box as="ul" display="flex" >
             <li>
               <span>Followers</span>
               <span>{stats.followers}</span>

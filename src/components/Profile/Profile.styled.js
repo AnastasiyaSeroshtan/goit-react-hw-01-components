@@ -10,18 +10,18 @@ export const UserPhoto = styled.img`
 `;
 
 export const UserName = styled.p`
-    color: ${p => p.theme.colors.accent};
+    color: ${p => p.theme.colors.black};
     font-family: ${p => p.theme.fonts.body};
-    font-size: ${p => p.theme.fontSizes[6]}px;
+    font-size: ${p => p.theme.fontSizes[5]}px;
     padding-top: ${p => p.theme.space[1]}px;
-    padding-bottom: ${p => p.theme.space[1]};
+    padding-bottom: ${p => p.theme.space[1]}px;
 
 `;
 
 export const UserInfo = styled.p`
     color: ${p => p.theme.colors.secondary};
     font-family: ${p => p.theme.fonts.body};
-    font-size: ${p => p.theme.fontSizes[4]}px;
+    font-size: ${p => p.theme.fontSizes[3]}px;
     padding-top: ${p => p.theme.space[1]}px;
-    padding-bottom: ${p => p.theme.space[1]};
+    padding-bottom: ${p => p.theme.space[1]}px;
 `;
