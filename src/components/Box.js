@@ -6,7 +6,8 @@ import {  color,
   grid,
   background,
   border,
-  position, } from 'styled-system'
+  position,
+  shadow, } from 'styled-system'
 
 export const Box = styled.div`
   ${color}
@@ -17,4 +18,5 @@ export const Box = styled.div`
   ${background}
   ${border}
   ${position}
+  ${shadow}
 `

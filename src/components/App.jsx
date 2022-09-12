@@ -4,7 +4,7 @@ import { Box } from "./Box";
 
 export const App = () => {
   return (
-    <Box bg="muted" display="flex" justifyItems="center">
+    <Box bg="muted" display="flex" justifyItems="center" >
       <Profile 
       username={user.username}
       tag={user.tag}
