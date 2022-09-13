@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Box } from "components/Box";
-import { TransactionHistoryItem } from "./TransactionHistoryItem";
+import { TransactionHistoryItem } from "./TransactionHistoryItem/TransactionHistoryItem";
 import { Head, LineTR, LineTh, Body } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({transactions}) => {
