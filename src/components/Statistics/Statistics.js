@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Box } from "components/Box";
 import { Header } from "./Header/Header";
 import { StatsList } from "./Stats/StatsList";
@@ -10,5 +11,12 @@ export const Statistics = ({title, stats}) => {
         <StatsList stats={stats} />
     </Box>
     )
-  
 }
+
+Statistics.prototype = {
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }))
+};
